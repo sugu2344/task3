@@ -16,6 +16,7 @@ startGameButton.addEventListener("click", () => {
 
     welcomeScreen.style.display = "none";
     gameScreen.style.display = "block";
+    // image embedded via js
 
     const cardArray = [
       // Cards set 1
@@ -120,10 +121,11 @@ startGameButton.addEventListener("click", () => {
     ];
 
     function suffleGame() {
-      grid.innerHTML = ""; // Clear the grid
-      cardArray.sort(() => 0.5 - Math.random()); // Shuffle cards
+      grid.innerHTML = "";
+      cardArray.sort(() => 0.5 - Math.random());
       board();
     }
+    // game board
 
     function board() {
       for (let i = 0; i < cardArray.length; i++) {
@@ -140,6 +142,7 @@ startGameButton.addEventListener("click", () => {
     let card_Choosen = [];
     let card_Choosen_id = [];
     let cardsWon = [];
+    //  to flip the card
 
     function flipcard() {
       const card_id = this.getAttribute("data-id");
@@ -156,7 +159,7 @@ startGameButton.addEventListener("click", () => {
         setTimeout(checkMatch, 500);
       }
     }
-
+    // to find match
     function checkMatch() {
       const cards = document.querySelectorAll("img");
       const firstCard = cards[card_Choosen_id[0]];
