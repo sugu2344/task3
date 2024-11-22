@@ -1,8 +1,12 @@
 const gridDisplay = document.querySelector("#grid");
 const resultDisplay = document.querySelector("#score");
-const cardArray = [ 
+const cardArray = [
   // set1
   {
+    name: "aspade",
+    img: "public/aspade.jpeg",
+  },
+  {
     name: "2spade",
     img: "public/2spade.png",
   },
@@ -34,12 +38,25 @@ const cardArray = [
     name: "9spade",
     img: "public/9spade.png",
   },
-  // {
-  //   name: "10spade",
-  //   img: "public/10spade",
-  // },
+  {
+    name: "10spade",
+    img: "public/10spade.png",
+  },
+  {
+    name: "kingspade",
+    img: "public/kingspade.jpg",
+  },
+  {
+    name: "queenspade",
+    img: "public/queenspade.jpeg",
+  },
+
   // set 2
   {
+    name: "aspade",
+    img: "public/aspade.jpeg",
+  },
+  {
     name: "2spade",
     img: "public/2spade.png",
   },
@@ -71,16 +88,24 @@ const cardArray = [
     name: "9spade",
     img: "public/9spade.png",
   },
-  // {
-  //   name: "10spade",
-  //   img: "public/10spade",
-  // },
+  {
+    name: "10spade",
+    img: "public/10spade.png",
+  },
+  {
+    name: "kingspade",
+    img: "public/kingspade.jpg",
+  },
+  {
+    name: "queenspade",
+    img: "public/queenspade.jpeg",
+  },
 ];
 board();
 function board() {
   for (let i = 0; i < cardArray.length; i++) {
     const card = document.createElement("img");
-    card.setAttribute("src", "public/dummy.jpeg");
+    card.setAttribute("src", "public/dummy.png");
     card.setAttribute("data-id", i);
     card.addEventListener("click", flipcard);
     gridDisplay.appendChild(card);
