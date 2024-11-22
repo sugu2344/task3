@@ -21,6 +21,8 @@ Players take turns flipping over two cards at a time. If the cards match, the pl
 
 ![game page](https://github.com/user-attachments/assets/38063cf7-826f-4899-9abd-86d2ec55a007)
 
+![Screenshot 2024-11-22 163910](https://github.com/user-attachments/assets/1967cc7d-3eb4-4f0c-98d9-740b66bcdb2c)
+
 ## Tech Stack
 
 
