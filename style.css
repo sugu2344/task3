@@ -4,6 +4,7 @@ body {
     justify-content: center;
     align-items: center;
     padding-bottom: 20px;
+    background-color: aqua;
 
 }
 
@@ -21,4 +22,15 @@ img {
     height: 130px;
     margin: 5px;
     object-fit: cover;
+}
+
+.homescreen {
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
 }
