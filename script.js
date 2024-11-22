@@ -142,9 +142,16 @@ startGameButton.addEventListener("click", () => {
 
     function flipcard() {
       const card_id = this.getAttribute("data-id");
+
+    
+      if (card_Choosen_id.includes(card_id)) {
+        return;
+      }
+
       this.setAttribute("src", cardArray[card_id].img);
       card_Choosen_id.push(card_id);
       card_Choosen.push(cardArray[card_id].name);
+
       if (card_Choosen.length === 2) {
         setTimeout(checkMatch, 500);
       }
