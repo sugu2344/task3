@@ -17,11 +17,17 @@
         </div>
     </div>
 
-    <div id="gameScreen" style="display: none;">
-        <h1>Memory Game - <span id="playerName"></span></h1>
-        <h3>Score: <span id="score"></span></h3>
-        <button id="resetButton">Shuffle cards</button>
-        <div id="grid"></div>
+    <div class="gamepage" id="gameScreen" style="display: none;">
+        <div class="gamehead">
+            <h1>Memory Game - <span id="playerName"></span></h1>
+            <div class="scorehead">
+                <h3>Score: <span id="score"></span></h3>
+                <button class="btn" id="resetButton">Shuffle cards</button>
+            </div>
+        </div>
+        <div class="contentgrid">
+            <div id="grid"></div>
+        </div>
     </div>
 
     <script src="./script.js"></script>

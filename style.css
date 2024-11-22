@@ -14,6 +14,7 @@ body {
     justify-content: center;
     width: 65%;
     gap: 5px;
+    padding: 20px;
 
 }
 
@@ -33,4 +34,46 @@ img {
     justify-content: center;
     align-items: center;
     margin-top: 10px;
+}
+
+#gameScreen {
+    background-color: #C2FFC7;
+    /* Change this to your desired color */
+    padding: 20px;
+    border-radius: 20px;
+    width: 80%;
+    margin-top: 20px;
+}
+
+.gamepage {
+    display: flex;
+    flex-direction: column;
+}
+
+.gamehead {
+    background-color: azure;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.scorehead {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.btn {
+    padding: 10px 20px;
+
+}
+
+.contentgrid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
