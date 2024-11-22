@@ -120,13 +120,31 @@ function board() {
     card.addEventListener("click", flipcard);
     gridDisplay.appendChild(card);
   }
+  console.log(cardArray);
 }
 
+card_Choosen = [];
+card_Choosen_id = [];
 function flipcard() {
   const card_id = this.getAttribute("data-id");
   this.setAttribute("src", cardArray[card_id].img);
-  console.log(card_id);
+  card_Choosen_id.push(card_id);
+  card_Choosen.push(cardArray[card_id].name);
+  if (card_Choosen.length === 2) {
+    setTimeout(checkMatch, 500);
+  }
 }
 resetButton.addEventListener("click", suffleGame);
 
 suffleGame();
+
+function checkMatch() {
+  const cards = document.querySelectorAll("img");
+  if (card_Choosen[0] == card_Choosen[1]) {
+    alert("match found");
+    cards[card_Choosen_id[0]].setAttribute("src", "public/done.jpeg");
+    cards[card_Choosen_id[1]].setAttribute("src", "public/done.jpeg");
+    cards[card_Choosen_id[0]].removeEventListener("click", flipcard);
+    cards[card_Choosen_id[1]].removeEventListener("click", flipcard);
+  }
+}
