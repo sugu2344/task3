@@ -6,7 +6,7 @@ The goal is to flip all the tiles face up in the fewest tries.
 =>Gameplay
 Players take turns flipping over two cards at a time. If the cards match, the player keeps them and puts them back in the pile. If they don't match, the player turns them face down again and passes the turn to the next player. The player with the most cards when all the cards have been flipped wins
 
-###Deployed url 
+##Deployed url 
 https://memory-app-card.netlify.app/
 
 
