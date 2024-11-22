@@ -131,7 +131,7 @@ function flipcard() {
   card_Choosen_id.push(card_id);
   card_Choosen.push(cardArray[card_id].name);
   if (card_Choosen.length === 2) {
-    setTimeout(checkMatch, 1000);
+    setTimeout(checkMatch, 500);
   }
 }
 resetButton.addEventListener("click", suffleGame);
@@ -141,21 +141,31 @@ cardsWon = [];
 
 function checkMatch() {
   const cards = document.querySelectorAll("img");
-  if (card_Choosen[0] == card_Choosen[1]) {
-    alert("match found");
-    cards[card_Choosen_id[0]].setAttribute("src", "public/done.jpeg");
-    cards[card_Choosen_id[1]].setAttribute("src", "public/done.jpeg");
-    cards[card_Choosen_id[0]].removeEventListener("click", flipcard);
-    cards[card_Choosen_id[1]].removeEventListener("click", flipcard);
+  const firstCard = cards[card_Choosen_id[0]];
+  const secondCard = cards[card_Choosen_id[1]];
+
+  if (card_Choosen[0] === card_Choosen[1]) {
+   
+    alert("Match found!");
+
+ 
+    firstCard.removeEventListener("click", flipcard);
+    secondCard.removeEventListener("click", flipcard);
+
     cardsWon.push(card_Choosen);
     resultDisplay.innerHTML = cardsWon.length;
   } else {
-    cards[card_Choosen_id[0]].setAttribute("src", "public/dummy.png");
-    cards[card_Choosen_id[1]].setAttribute("src", "public/dummy.png");
+    
+    firstCard.setAttribute("src", "public/dummy.png");
+    secondCard.setAttribute("src", "public/dummy.png");
   }
+
+
   card_Choosen = [];
   card_Choosen_id = [];
-  if (cardsWon.length == cardArray.length / 2) {
-    resultDisplay.innerHTML = "congrulations";
+
+ 
+  if (cardsWon.length === cardArray.length / 2) {
+    resultDisplay.innerHTML = "Congratulations! You've matched all cards!";
   }
 }
