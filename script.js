@@ -1,5 +1,6 @@
 const gridDisplay = document.querySelector("#grid");
 const resultDisplay = document.querySelector("#score");
+const resetButton = document.querySelector("#resetButton");
 const cardArray = [
   // set1
   {
@@ -101,6 +102,15 @@ const cardArray = [
     img: "public/queenspade.jpeg",
   },
 ];
+// cardArray.sort(() => 0.5 - Math.random());
+function suffleGame() {
+  gridDisplay.innerHTML = "";
+
+  cardArray.sort(() => 0.5 - Math.random());
+
+  board();
+}
+
 board();
 function board() {
   for (let i = 0; i < cardArray.length; i++) {
@@ -111,8 +121,12 @@ function board() {
     gridDisplay.appendChild(card);
   }
 }
+
 function flipcard() {
   const card_id = this.getAttribute("data-id");
   this.setAttribute("src", cardArray[card_id].img);
   console.log(card_id);
 }
+resetButton.addEventListener("click", suffleGame);
+
+suffleGame();
