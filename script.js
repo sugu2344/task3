@@ -6,6 +6,20 @@ const playerNameDisplay = document.getElementById("playerName");
 const scoreDisplay = document.getElementById("score");
 const resetButton = document.getElementById("resetButton");
 const grid = document.getElementById("grid");
+const restartButton = document.getElementById("restartButton");
+
+// restart  functionality
+restartButton.addEventListener("click", () => {
+  score = 0;
+  card_Choosen = [];
+  card_Choosen_id = [];
+  cardsWon = [];
+  scoreDisplay.textContent = score;
+  grid.innerHTML = "";
+  gameScreen.style.display = "none";
+  welcomeScreen.style.display = "block";
+  playerNameInput.value = "";
+});
 
 let score = 0;
 
