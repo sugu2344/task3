@@ -135,6 +135,7 @@ startGameButton.addEventListener("click", () => {
       }
       console.log(cardArray);
     }
+    //
 
     let card_Choosen = [];
     let card_Choosen_id = [];
@@ -143,7 +144,6 @@ startGameButton.addEventListener("click", () => {
     function flipcard() {
       const card_id = this.getAttribute("data-id");
 
-    
       if (card_Choosen_id.includes(card_id)) {
         return;
       }
