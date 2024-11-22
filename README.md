@@ -1,5 +1,5 @@
 
-# Memory-Game app Dom
+# Memory-Game app using Dom
 A memory game is a game that uses memory to find matching pairs of tiles or cards: 
 =>Goal
 The goal is to flip all the tiles face up in the fewest tries. 
